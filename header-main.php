@@ -27,7 +27,7 @@
                   
         <div class="nav-collapse collapse navbar-responsive-collapse">
           <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav navbar-nav', 'fallback_cb' => false, 'walker' => new Pageroll_Bootstrap_Menu ) ); ?>
-          <form method="get" class="navbar-form pull-right" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
+          <form method="get" class="navbar-form dropdown-menu-right" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
             <input type="text" class="form-control" name="s" value="<?php echo esc_attr( get_search_query() ); ?>" placeholder="Search" style="width: 200px;">
           </form>
         </div><!-- .nav-collapse -->

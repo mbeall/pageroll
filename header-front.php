@@ -27,7 +27,7 @@
                   
         <div class="nav-collapse collapse navbar-responsive-collapse">
           <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav navbar-nav', 'fallback_cb' => false, 'walker' => new Pageroll_Bootstrap_Menu ) ); ?>
-          <form method="get" class="navbar-form pull-right" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
+          <form method="get" class="navbar-form dropdown-menu-right" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
             <input type="text" class="form-control" name="s" value="<?php echo esc_attr( get_search_query() ); ?>" placeholder="Search" style="width: 200px;">
           </form>
         </div><!-- .nav-collapse -->
@@ -41,7 +41,7 @@
 				<img src="<?php header_image(); ?>" alt="" />
 			</a>
 		<?php } /* if ( ! empty( $header_image ) ) */ ?>
-        <div class="col-lg-8 visible-lg" id="app-btn">
+        <div class="col-lg-8 visible-lg-block" id="app-btn">
             <div class="site-branding col-lg-6 col-offset-3">
             	<h3><i class="icon-road"></i> Owner-Operators Wanted</h3>
                 <a class="btn btn-outline btn-large btn-block" href="<?php echo esc_url( home_url( '/driverapp' ) ); ?>"><i class="icon-file"></i> Apply Now</a>
